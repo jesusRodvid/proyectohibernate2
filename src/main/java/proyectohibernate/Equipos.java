@@ -128,5 +128,22 @@ public class Equipos {
 	public void setLigasobj(Ligas ligasobj) {
 		this.ligasobj = ligasobj;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Equipos [codEquipo=" + codEquipo + ", nomEquipo=" + nomEquipo + ", localidad=" + localidad
+				+ ", internacional=" + internacional + ", equipoobservaciones=" + equipoobservaciones + ", contratos="
+				+ contratos + ", ligasobj=" + ligasobj + "]";
+	}
+
+
+	public Equipos( String nomEquipo, String localidad, boolean internacional, Ligas ligasobj) {
+		super();
+		this.nomEquipo = nomEquipo;
+		this.localidad = localidad;
+		this.internacional = internacional;
+		this.ligasobj = ligasobj;
+	}
 	
 }

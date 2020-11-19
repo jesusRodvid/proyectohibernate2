@@ -60,6 +60,17 @@ public class Futbolistas {
 	public String toString() {
 		return "Futbolistas [codDNIoNIE=" + codDNIoNIE + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad
 				+ ", contratos=" + contratos + "]";
+	}
+
+	public Futbolistas(String codDNIoNIE, String nombre, String nacionalidad) {
+		super();
+		this.codDNIoNIE = codDNIoNIE;
+		this.nombre = nombre;
+		this.nacionalidad = nacionalidad;	}
+
+	public Futbolistas() {
+		super();
+		// TODO Auto-generated constructor stub
 	} 
 
 	

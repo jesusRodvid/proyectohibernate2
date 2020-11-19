@@ -126,6 +126,16 @@ public class Contratos {
 		this.equiposobj = equiposobj;
 	}
 
+	public Contratos(Futbolistas futbolistaobj,Equipos equiposobj,  GregorianCalendar fechaInicio, GregorianCalendar fechaFin, int precioAnual,
+			int precioRecision) {
+		super();
+		this.fechaInicio = fechaInicio;
+		this.fechaFin = fechaFin;
+		this.precioAnual = precioAnual;
+		this.precioRecision = precioRecision;
+		this.equiposobj = equiposobj;
+	}
+
 	
 
 	

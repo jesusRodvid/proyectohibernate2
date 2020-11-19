@@ -16,13 +16,13 @@ import javax.persistence.Table;
 public class Ligas {
 	@Id
 	@Column ( columnDefinition= "char(5)")
-	String 	codLiga; 
+	private String 	codLiga; 
 	@Column ( columnDefinition= "varchar(50)")
-	String nomLiga;
+	private String nomLiga;
 	
 	@OneToMany (cascade={CascadeType.PERSIST,CascadeType.REFRESH}, fetch=FetchType.EAGER,mappedBy="ligasobj" )
 	//@JoinColumn(name="codEquipo")
-	List<Equipos> residencia = new ArrayList<Equipos>();
+	List<Equipos> equipos = new ArrayList<Equipos>();
 
 	public String getCodLiga() {
 		return codLiga;
@@ -40,12 +40,25 @@ public class Ligas {
 		this.nomLiga = nomLiga;
 	}
 
-	public List<Equipos> getResidencia() {
-		return residencia;
+	public List<Equipos> getEquipos() {
+		return equipos;
 	}
 
-	public void setResidencia(List<Equipos> residencia) {
-		this.residencia = residencia;
+	public void setEquipos(List<Equipos> equipos) {
+		this.equipos = equipos;
 	}
+
+	public Ligas(String codLiga, String nomLiga) {
+		super();
+		this.codLiga = codLiga;
+		this.nomLiga = nomLiga;
+	}
+
+	public Ligas() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 	
 }

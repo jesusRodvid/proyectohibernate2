@@ -19,10 +19,10 @@ public class EquipoObservaciones {
 	@GeneratedValue(generator = "myForeign")
 	@GenericGenerator( name = "myForeign", strategy = "foreign",
 	parameters = {@org.hibernate.annotations.Parameter(name = "property", value = "codEquipoXXX")})
-	Integer codEquipo ;
+	private int codEquipo ;
 	
 	@Column ( columnDefinition= "varchar(200)")
-	String 	observaciones ; 
+	private String observaciones ; 
 	
 	@OneToOne (cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	/*cascade={CascadeType.PERSIST,CascadeType.REMOVE}*/
@@ -56,6 +56,17 @@ public class EquipoObservaciones {
 
 	public void setCodEquipoXXX(Equipos codEquipoXXX) {
 		this.codEquipoXXX = codEquipoXXX;
+	}
+
+	@Override
+	public String toString() {
+		return "EquipoObservaciones [codEquipo=" + codEquipo + ", observaciones=" + observaciones + ", codEquipoXXX="
+				+ codEquipoXXX + "]";
+	}
+
+	public EquipoObservaciones( String observaciones) {
+		super();
+		this.observaciones = observaciones;
 	}
 	
 	
